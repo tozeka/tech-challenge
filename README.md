@@ -16,6 +16,10 @@ We need new add new features in our incredible Rest API. But first of all...
 
 `$ php artisan serve`
 
+### Challenge Statement
+
+You'll work on a backend to support a movie gallery web application. This application should allow its users to view and manage movies, actors, and genres, as well as generate some reports to compare and rank actors. To get you started, you'll find an already developed plugin: `/genres` -- *feel free to use as an inspiration, as it is also inspired our current practices*.
+
 ### Issues
 
 To complete this challenge, you should implement these following issues:
@@ -64,6 +68,10 @@ As a user, I want to get the number of movies by genre on an actor profile page.
 As a user, I want to get a list of actors for a given Genre ordered by movie actor appearances (according the actor rules starred in a movie).
 
 _Eddie Murphy starred at last **five** roles on The Nutty Professor, **so he appeared five times**: https://pt.wikipedia.org/wiki/The_Nutty_Professor_(1996)_
+
+### Unit tests
+
+Unit tests and feature tests are desirable.
 
 ### Installation
 
