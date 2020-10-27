@@ -1,6 +1,13 @@
-## The challenge
+### First of all
 
-We need new add new features in our incredible Rest API. But first of all...
+This challenge should be fun. Really. Be free to let your DNA and knowledge here. 
+
+After your pull request when you finish your code we gonna have a meeting to discuss your decisions. Let's grow up together.
+
+You'll work on a backend to support a movie gallery web application. This application should allow its users to view and manage movies, actors, and genres, as well as generate some reports 
+to compare and rank actors. 
+
+To get you started, you'll find an already developed an: `/api/genres` -- *feel free to use as an inspiration, as it is also inspired our current practices*.
 
 ### Starting
 
@@ -15,10 +22,6 @@ We need new add new features in our incredible Rest API. But first of all...
 `$ php artisan db:seed`
 
 `$ php artisan serve`
-
-### Challenge Statement
-
-You'll work on a backend to support a movie gallery web application. This application should allow its users to view and manage movies, actors, and genres, as well as generate some reports to compare and rank actors. To get you started, you'll find an already developed plugin: `/genres` -- *feel free to use as an inspiration, as it is also inspired our current practices*.
 
 ### Issues
 
@@ -72,6 +75,10 @@ _Eddie Murphy starred at last **five** roles on The Nutty Professor, **so he app
 ### Unit tests
 
 Unit tests and feature tests are desirable.
+
+### API Client
+
+You are free to use any API client to test your code. Insomina.json is placed into the root folder with `/api/genres` routes in order to help you. 
 
 ### Installation
 
