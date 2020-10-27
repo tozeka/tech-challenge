@@ -12,4 +12,5 @@ npm-debug.log
 yarn-error.log
 workspace.xml
 .DS_STORE
+/database/database.sqlite
 

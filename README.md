@@ -1,3 +1,80 @@
+## The challenge
+
+We need new add new features in our incredible Rest API. But first of all...
+
+### Starting
+
+`$ cp .env.example .env`
+
+`$ php artisan key:generate`
+
+`$ cp database/database.sqlite.example database/database.sqlite`
+
+`$ php artisan migrate`
+
+`$ php artisan db:seed`
+
+`$ php artisan serve`
+
+### Issues
+
+To complete this challenge, you should implement these following issues:
+
+##### EDD-00001 Create movie CRUD
+
+```ts
+{
+    name,
+    year,
+    synopsis,
+    runtime, // minutes
+    released_at,
+    cost // int
+}
+
+```
+##### EDD-00002 Create actor CRUD
+
+```ts
+{
+    name,
+    bio,
+    born_at
+}
+```
+
+##### EDD-00003 View Actor's movie appearances
+
+As a user, I want to get a list of movies that a given Actor starred on. 
+_Remember that: An actor could star more than one role in the same movie_
+
+##### EDD-00005 Select one of the following
+
+1. View Actor's favorite genre.
+
+As a user, I want to get the favorite genre of a given Actor.
+Business Rule: the favorite genre is the one with the most appearances.
+   
+2. View Actor's number of Movies in Genres
+
+As a user, I want to get the number of movies by genre on an actor profile page.
+
+3. View Actors in a Genre
+   
+As a user, I want to get a list of actors for a given Genre ordered by movie actor appearances (according the actor rules starred in a movie).
+
+_Eddie Murphy starred at last **five** roles on The Nutty Professor, **so he appeared five times**: https://pt.wikipedia.org/wiki/The_Nutty_Professor_(1996)_
+
+### Installation
+
+Fork this repository into your GitHub workspace and work from there.
+
+### Submitting
+
+You should submit the Fork link.
+
+Thx.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
