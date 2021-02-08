@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Traits\HasFetchAllRenderCapabilities;
 use App\Http\Requests\GenreRequest;
+use App\Models\Actor;
 use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
@@ -79,5 +80,21 @@ class GenreController extends Controller
         $genre->delete();
 
         return response()->noContent();
+    }
+
+    public function actors(Genre $genre)
+    {
+     
+        
+        $actors =  Actor::withCount(['roles' => function($query) use($genre){
+                $query->whereHas('movie.genres', function($query) use($genre){
+                    $query->where('id',$genre->id);   
+                });
+        
+        }])->orderBy('roles_count','desc')->get();
+
+      
+        return $actors;
+      
     }
 }

@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Traits\HasFetchAllRenderCapabilities;
-use App\Actor;
+use App\Models\Actor;
 use App\Http\Requests\ActorRequest;
 use App\Http\Resources\ActorResource;
+use App\Http\Resources\MovieResource;
+use App\Models\Genre;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
-
+use Illuminate\Support\Facades\DB;
 
 class ActorController extends Controller
 {
@@ -85,4 +87,19 @@ class ActorController extends Controller
         
          return response()->noContent();
     }
+
+    public function movies(Actor $actor)
+    {
+    
+       $movies = $actor->movies()->orderByReleaseDate()->get()->unique();
+       
+       return MovieResource::collection($movies);
+       
+    }
+
+    public function genre(Actor $actor)
+    {
+        
+    }
+    
 }

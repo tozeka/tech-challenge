@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Traits\HasFetchAllRenderCapabilities;
 use App\Http\Requests\MovieRequest;
 use App\Http\Resources\MovieResource;
-use App\Movie;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 

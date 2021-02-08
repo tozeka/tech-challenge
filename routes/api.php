@@ -26,3 +26,7 @@ Route::apiResources([
      'actors' => ActorController::class,
      'movies' => MovieController::class,
 ]);
+
+Route::get('actors/movies/{actor}', 'ActorController@movies')->name('actors.movies');
+//Route::get('actors/genre/{actor}', 'ActorController@genre')->name('genres.actors');
+Route::get('genres/actors/{genre}', 'GenreController@actors')->name('genres.actors');
