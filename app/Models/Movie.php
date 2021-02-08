@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
 {
+     protected $fillable = ['name','year','synopsis','runtime','released_at','cost'];
+
     public function actors()
     {
           return $this->belongsToMany(Actor::class)->using(Role::class);
